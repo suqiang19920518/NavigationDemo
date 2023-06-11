@@ -25,10 +25,14 @@
             app:exitAnim="@anim/slide_out_left" />
         <action
             android:id="@+id/action_mainFragment_to_personal_info"
-            app:destination="@id/personal_info_navigation"/>
+            app:destination="@id/personal_info_navigation"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
         <action
             android:id="@+id/action_mainFragment_to_webGraph"
-            app:destination="@id/webGraph" />
+            app:destination="@id/webGraph"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
         <action
             android:id="@+id/action_mainFragment_to_profileFragment"
             app:destination="@id/profileFragment"
@@ -78,6 +82,8 @@
     <action
         android:id="@+id/action_global_mainFragment3"
         app:destination="@id/mainFragment"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left"
         app:popUpTo="@id/mainFragment"
         app:popUpToInclusive="true" />
 

@@ -8,8 +8,10 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.ActivityNavigator;
 import androidx.navigation.NavController;
 import androidx.navigation.NavDirections;
+import androidx.navigation.NavOptions;
 import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 
@@ -94,11 +96,19 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         } else if (v.getId() == R.id.tv_profile) {
             navController.navigate(R.id.action_mainFragment_to_profileFragment);
         } else if (v.getId() == R.id.tv_start_simple_activity) {
-            navController.navigate(R.id.sampleActivityDestination);
+            NavOptions navOptions = new NavOptions.Builder()
+                    .setEnterAnim(R.anim.slide_in_right)
+                    .setExitAnim(R.anim.slide_out_left)
+                    .build();
+            navController.navigate(R.id.sampleActivityDestination, null, navOptions);
             // startActivity(new Intent(getActivity(), SimpleActivity.class));
         } else if (v.getId() == R.id.tv_start_intent_activity) {
             //目的地应用未在其清单中使用匹配的 intent-filter 定义 Activity，系统就会抛出 ActivityNotFoundException。
-            navController.navigate(R.id.intentActivityDestination);
+            NavOptions navOptions = new NavOptions.Builder()
+                    .setEnterAnim(R.anim.slide_in_right)
+                    .setExitAnim(R.anim.slide_out_left)
+                    .build();
+            navController.navigate(R.id.intentActivityDestination, null, navOptions);
             // startActivity(new Intent("android.intent.action.SETTING"));
         } else if (v.getId() == R.id.tv_start_personal_info) {
             navController.navigate(MainFragmentDirections.actionMainFragmentToPersonalInfo());

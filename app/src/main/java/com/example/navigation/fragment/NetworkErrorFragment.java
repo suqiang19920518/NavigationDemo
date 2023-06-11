@@ -8,6 +8,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.NavDeepLinkRequest;
+import androidx.navigation.NavOptions;
 import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 
@@ -68,7 +69,11 @@ public class NetworkErrorFragment extends Fragment implements View.OnClickListen
             // navController.navigate(R.id.action_global_mainFragment3);
             //方法三
             MainNavigationDirections.ActionGlobalMainFragment3 action = MainNavigationDirections.actionGlobalMainFragment3();
-            navController.navigate(action);
+            NavOptions navOptions = new NavOptions.Builder()
+                    .setEnterAnim(R.anim.slide_in_right)
+                    .setExitAnim(R.anim.slide_out_left)
+                    .build();
+            navController.navigate(action, navOptions);
         }
     }
 }

@@ -65,7 +65,11 @@ public class ProfileFragment extends Fragment {
             });
             Boolean isLogin = savedStateHandle.get(LOGIN_SUCCESSFUL);
             if (isLogin == null || !isLogin) { //未登录
-                navController.navigate(R.id.loginFragment);
+                NavOptions navOptions = new NavOptions.Builder()
+                        .setEnterAnim(R.anim.slide_in_right)
+                        .setExitAnim(R.anim.slide_out_left)
+                        .build();
+                navController.navigate(R.id.loginFragment, null, navOptions);
             }
         }
     }

@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
+import androidx.navigation.NavOptions;
 import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 
@@ -54,7 +55,11 @@ public class ResetFragment extends Fragment implements View.OnClickListener {
         if (v.getId() == R.id.tv_to_main_fragment) {
             MainNavigationDirections.ActionGlobalMainFragment3 action = MainNavigationDirections.actionGlobalMainFragment3();
             action.setFromType("reset");
-            navController.navigate(action);
+            NavOptions navOptions = new NavOptions.Builder()
+                    .setEnterAnim(R.anim.slide_in_right)
+                    .setExitAnim(R.anim.slide_out_left)
+                    .build();
+            navController.navigate(action, navOptions);
         }
     }
 }

@@ -10,6 +10,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.ActivityNavigator;
 import androidx.navigation.NavController;
+import androidx.navigation.NavDeepLinkBuilder;
+import androidx.navigation.NavDeepLinkRequest;
 import androidx.navigation.NavDirections;
 import androidx.navigation.NavOptions;
 import androidx.navigation.Navigation;
@@ -55,6 +57,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         TextView mTvStartIntentActivity = view.findViewById(R.id.tv_start_intent_activity);
         TextView mTvStartPersonalInfo = view.findViewById(R.id.tv_start_personal_info);
         TextView mTvStartWebActivity = view.findViewById(R.id.tv_start_web_activity);
+        TextView mTvStartDeeplinkActivity = view.findViewById(R.id.tv_start_deep_link_activity);
 
         mTvLogin.setOnClickListener(this);
         mTvRegister.setOnClickListener(this);
@@ -63,6 +66,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         mTvStartIntentActivity.setOnClickListener(this);
         mTvStartPersonalInfo.setOnClickListener(this);
         mTvStartWebActivity.setOnClickListener(this);
+        mTvStartDeeplinkActivity.setOnClickListener(this);
         return view;
     }
 
@@ -116,6 +120,9 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         } else if (v.getId() == R.id.tv_start_web_activity) {
             navController.navigate(MainFragmentDirections.actionMainFragmentToWebGraph());
 //            navController.navigate(R.id.action_mainFragment_to_webGraph);
+        } else if (v.getId() == R.id.tv_start_deep_link_activity) {
+            NavDeepLinkRequest request = NavDeepLinkRequest.Builder.fromAction("android.intent.action.SEARCH").build();
+            navController.navigate(request);
         }
     }
 }

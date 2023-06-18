@@ -5,74 +5,96 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tv_login"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginBottom="20dp"
-        android:background="@color/purple_200"
-        android:textSize="30sp"
-        android:gravity="center"
-        android:text="startLogin" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tv_register"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginBottom="20dp"
-        android:background="@color/purple_200"
-        android:textSize="30sp"
-        android:gravity="center"
-        android:text="startRegister"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tv_profile"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginBottom="20dp"
-        android:background="@color/purple_200"
-        android:textSize="30sp"
-        android:gravity="center"
-        android:text="startProfile"/>
+            <TextView
+                android:id="@+id/tv_login"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/purple_200"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:text="startLogin" />
 
-    <TextView
-        android:id="@+id/tv_start_simple_activity"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginBottom="20dp"
-        android:background="@color/purple_200"
-        android:textSize="30sp"
-        android:gravity="center"
-        android:text="startSimpleAbout"/>
+            <TextView
+                android:id="@+id/tv_register"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/purple_200"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:text="startRegister"/>
 
-    <TextView
-        android:id="@+id/tv_start_intent_activity"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginBottom="20dp"
-        android:background="@color/purple_200"
-        android:textSize="30sp"
-        android:gravity="center"
-        android:text="startIntentSetting"/>
+            <TextView
+                android:id="@+id/tv_profile"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/purple_200"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:text="startProfile"/>
 
-    <TextView
-        android:id="@+id/tv_start_personal_info"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginBottom="20dp"
-        android:background="@color/purple_200"
-        android:textSize="30sp"
-        android:gravity="center"
-        android:text="startPersonalInfo"/>
+            <TextView
+                android:id="@+id/tv_start_simple_activity"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/purple_200"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:text="startSimpleAbout"/>
 
-    <TextView
-        android:id="@+id/tv_start_web_activity"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginBottom="20dp"
-        android:background="@color/purple_200"
-        android:textSize="30sp"
-        android:gravity="center"
-        android:text="startWebActivity"/>
+            <TextView
+                android:id="@+id/tv_start_intent_activity"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/purple_200"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:text="startIntentSetting"/>
 
+            <TextView
+                android:id="@+id/tv_start_personal_info"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/purple_200"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:text="startPersonalInfo"/>
+
+            <TextView
+                android:id="@+id/tv_start_web_activity"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/purple_200"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:text="startWebActivity"/>
+
+            <TextView
+                android:id="@+id/tv_start_deep_link_activity"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/purple_200"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:text="startDeepLinkActivity"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
 </LinearLayout>

@@ -43,7 +43,7 @@ public class ModifyFragment extends Fragment implements View.OnClickListener {
         View view = inflater.inflate(R.layout.fragment_modify, container, false);
         TextView mTvToMain = view.findViewById(R.id.tv_to_main_fragment);
         mTvToMain.setOnClickListener(this);
-//        mTvToMain.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_global_mainFragment3));
+        mTvToMain.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_global_mainFragment3, null));
         return view;
     }
 

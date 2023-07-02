@@ -103,6 +103,8 @@ public class MainFragment extends Fragment implements View.OnClickListener {
             NavOptions navOptions = new NavOptions.Builder()
                     .setEnterAnim(R.anim.slide_in_right)
                     .setExitAnim(R.anim.slide_out_left)
+                    .setPopEnterAnim(R.anim.slide_in_left)
+                    .setPopExitAnim(R.anim.slide_out_right)
                     .build();
             navController.navigate(R.id.sampleActivityDestination, null, navOptions);
             // startActivity(new Intent(getActivity(), SimpleActivity.class));
@@ -111,6 +113,8 @@ public class MainFragment extends Fragment implements View.OnClickListener {
             NavOptions navOptions = new NavOptions.Builder()
                     .setEnterAnim(R.anim.slide_in_right)
                     .setExitAnim(R.anim.slide_out_left)
+                    .setPopEnterAnim(R.anim.slide_in_left)
+                    .setPopExitAnim(R.anim.slide_out_right)
                     .build();
             navController.navigate(R.id.intentActivityDestination, null, navOptions);
             // startActivity(new Intent("android.intent.action.SETTING"));
@@ -122,7 +126,13 @@ public class MainFragment extends Fragment implements View.OnClickListener {
 //            navController.navigate(R.id.action_mainFragment_to_webGraph);
         } else if (v.getId() == R.id.tv_start_deep_link_activity) {
             NavDeepLinkRequest request = NavDeepLinkRequest.Builder.fromAction("android.intent.action.SEARCH").build();
-            navController.navigate(request);
+            NavOptions navOptions = new NavOptions.Builder()
+                    .setEnterAnim(R.anim.slide_in_right)
+                    .setExitAnim(R.anim.slide_out_left)
+                    .setPopEnterAnim(R.anim.slide_in_left)
+                    .setPopExitAnim(R.anim.slide_out_right)
+                    .build();
+            navController.navigate(request, navOptions);
         }
     }
 }

@@ -1,6 +1,7 @@
 package com.example.navigation.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.ActivityNavigator;
 
 import android.os.Bundle;
 
@@ -12,5 +13,11 @@ public class SettingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        ActivityNavigator.applyPopAnimationsToPendingTransition(this);
     }
 }

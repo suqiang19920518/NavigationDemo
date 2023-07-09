@@ -125,7 +125,9 @@ public class MainFragment extends Fragment implements View.OnClickListener {
             navController.navigate(MainFragmentDirections.actionMainFragmentToWebGraph());
 //            navController.navigate(R.id.action_mainFragment_to_webGraph);
         } else if (v.getId() == R.id.tv_start_deep_link_activity) {
-            NavDeepLinkRequest request = NavDeepLinkRequest.Builder.fromAction("android.intent.action.SEARCH").build();
+            NavDeepLinkRequest request = NavDeepLinkRequest.Builder.fromUri(Uri.parse("https://github.com/baiyazi/")).build();
+//            NavDeepLinkRequest request = NavDeepLinkRequest.Builder.fromAction("android.intent.action.SEARCH").build();
+//            NavDeepLinkRequest request = NavDeepLinkRequest.Builder.fromMimeType("text/html").build();
             NavOptions navOptions = new NavOptions.Builder()
                     .setEnterAnim(R.anim.slide_in_right)
                     .setExitAnim(R.anim.slide_out_left)

@@ -81,7 +81,7 @@
             android:id="@+id/deepLink"
             app:action="android.intent.action.SEARCH"
             app:mimeType="text/html"
-            app:uri="https://www.baidu.com" />
+            app:uri="https://github.com/baiyazi/" />
     </fragment>
 
     <fragment
@@ -125,6 +125,22 @@
                 app:exitAnim="@anim/slide_out_left"
                 app:popEnterAnim="@anim/slide_in_left"
                 app:popExitAnim="@anim/slide_out_right" />
+
+            <argument
+                android:name="type"
+                app:argType="integer"
+                android:defaultValue="0"
+                app:nullable="false"/>
+            <argument
+                android:name="uname"
+                app:argType="string"
+                android:defaultValue="@null"
+                app:nullable="true"/>
+
+            <deepLink
+                android:id="@+id/settingsDeepLink"
+                app:uri="https://blog.shijiusui.com/?type={type}&amp;uname={uname}"
+                android:autoVerify="false"/>
         </fragment>
         <fragment
             android:id="@+id/networkErrorFragment"
